@@ -1,0 +1,134 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, hwb(0 100% 0%), rgb(51, 146, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.contenedor {
+background: linear-gradient(135deg, rgb(255, 255, 255), #2079ff);    width: 700px;
+    padding: 200px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.contenedor:hover {
+    transform: translateY(-5px);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+/* Área de input */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #6ab0ff;
+    box-shadow: 0 0 8px rgb(89, 180, 255);
+}
+
+/* Botón agregar */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #004872, #b7eeff);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Lista */
+ul {
+    list-style: none;
+}
+
+/* Tareas */
+li {
+    background: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+li:hover {
+    background: #f1f1f1;
+}
+
+/* Tarea completada */
+li.completada {
+    text-decoration: line-through;
+    color: #3b3f04;
+    background: #fffd9e;
+}
+
+/* Botón eliminar */
+.eliminar {
+    background: #ff4d4d;
+    border-radius: 8px;
+    padding: 5px 8px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.eliminar:hover {
+    background: #cc0000;
+    transform: scale(1.1);
+}
+.editar {
+    background: #6fff76;
+    color: #175f1d;
+    border-radius: 8px;
+    padding: 5px 8px;
+    font-size: 12px;
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.editar:hover {
+    background: #76f856;
+    transform: scale(1.1);
+}
