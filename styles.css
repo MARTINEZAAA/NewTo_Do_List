@@ -76,9 +76,9 @@ h1 {
 /* Cada tarea individual que se agregue */
 #listaTareas li {
     background: #f9f9f9;
-    margin-bottom: 8px;
-    padding: 12px;
-    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
@@ -87,6 +87,34 @@ h1 {
 }
 
 #listaTareas li:hover {
-    border-color: #b00000;
+    border-color: #000000;
     transform: translateX(5px); /* Efecto sutil al pasar el mouse */
 }
+.completada {
+    text-decoration: line-through; /* Tacha el texto */
+    color: gray;                  /* Lo vuelve gris */
+    opacity: 0.6;                 /* Lo hace un poco transparente */
+}
+button.eliminar {
+    background-color: transparent;
+    width: 60px;
+    border: solid 1px black;
+    border-radius: 4px;
+    color: white;
+    background: #b00000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+button.editar {
+    margin-right: 5px;
+    background-color: transparent;
+    width: 58px;
+    border: solid 1px black;
+    border-radius: 4px;
+    background: #2d8f00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}   
