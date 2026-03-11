@@ -4,6 +4,13 @@ const lista = document.getElementById("listaTareas");
 
 boton.addEventListener("click", agregarTarea);
 
+// Agregar tarea con la tecla ENTER
+input.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        agregarTarea();
+    }
+});
+
 function agregarTarea() {
     const texto = input.value.trim();
     if (texto === "") return;
@@ -58,9 +65,9 @@ function crearElementoTarea(texto) {
     });
 
     // Marcar como completada
-    li.addEventListener("click", function () {
-        li.classList.toggle("completada");
-    });
+    spanTexto.addEventListener("click", function () {
+    li.classList.toggle("completada");
+});
 
     contenedorBotones.appendChild(botonEditar);
     contenedorBotones.appendChild(botonEliminar);

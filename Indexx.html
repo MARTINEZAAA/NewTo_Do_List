@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- 
+    Declaración del tipo de documento.
+    Indica al navegador que el archivo está escrito en HTML5.
+-->
+
+<html lang="es">
+<!-- 
+    Etiqueta principal del documento HTML.
+    lang="es" indica que el idioma de la página es español.
+-->
+
+<head>
+    <!-- 
+        La sección <head> contiene información del documento
+        que no se muestra directamente en la página.
+    -->
+
+    <meta charset="UTF-8">
+    <!-- 
+        Define la codificación de caracteres.
+        UTF-8 permite usar acentos, ñ, símbolos, etc.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        Hace que la página sea adaptable a dispositivos móviles.
+        Ajusta el ancho al tamaño de la pantalla.
+    -->
+
+    <title>Login - TO DO LIST</title>
+    <!-- 
+        Título de la página que aparece en la pestaña del navegador.
+    -->
+
+    <link rel="stylesheet" href="Indexx.css">
+    <!-- 
+        Enlace al archivo CSS externo.
+        Aquí se definen los estilos visuales de la página.
+    -->
+
+</head>
+
+<body>
+<!-- 
+    El <body> contiene todo el contenido visible de la página.
+-->
+
+    <div class="login-container">
+        <!-- 
+            Contenedor principal del login.
+            Se usa para centrar o acomodar todo el formulario en la pantalla.
+        -->
+        
+        <div class="login-box">
+            <!-- 
+                Caja o panel del login.
+                Aquí se agrupan los elementos del formulario.
+            -->
+            
+            <h1>LOGIN</h1>
+            <!-- 
+                Título principal del formulario de acceso.
+            -->
+
+            <p class="subtitulo">Sistema de acceso</p>
+            <!-- 
+                Subtítulo informativo debajo del título.
+                La clase se usa para darle estilo con CSS.
+            -->
+
+            <div class="input-group">
+                <!-- 
+                    Grupo de entrada para el usuario.
+                    Se usa para organizar la etiqueta y el campo de texto.
+                -->
+
+                <label for="usname">Usuario</label>
+                <!-- 
+                    Etiqueta descriptiva del campo.
+                    for="usname" conecta el label con el input.
+                -->
+
+                <input type="text" id="usname" placeholder="Ingrese su usuario">
+                <!-- 
+                    Campo de texto donde el usuario escribe su nombre de usuario.
+                    placeholder muestra un texto de ejemplo dentro del campo.
+                -->
+            </div>
+
+            <div class="input-group">
+                <!-- 
+                    Grupo de entrada para el pin o contraseña.
+                -->
+
+                <label for="pin">Pin</label>
+                <!-- 
+                    Etiqueta que describe el campo de contraseña.
+                -->
+
+                <input type="password" id="pin" placeholder="Ingrese su pin">
+                <!-- 
+                    Campo de tipo password.
+                    Los caracteres se ocultan por seguridad.
+                -->
+            </div>
+
+            <div class="button-container">
+                <!-- 
+                    Contenedor para los botones del formulario.
+                -->
+
+                <button class="btn-login" onclick="login()">Login</button>
+                <!-- 
+                    Botón para iniciar sesión.
+                    onclick ejecuta la función login() definida en login.js
+                -->
+
+                <button class="btn-registro" onclick="window.location.href='registro.html'">
+                    Registrarse
+                </button>
+                <!-- 
+                    Botón para ir a la página de registro.
+                    window.location.href redirige a registro.html
+                -->
+
+            </div>
+
+            <p id="respuesta"></p>
+            <!-- 
+                Párrafo donde se mostrará la respuesta del sistema,
+                por ejemplo: "Usuario incorrecto" o "Login exitoso".
+                El contenido se modifica con JavaScript.
+            -->
+
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+    <!-- 
+        Enlace al archivo JavaScript externo.
+        Aquí se encuentra la lógica del login (función login()).
+    -->
+
+</body>
+</html>
