@@ -1,17 +1,56 @@
+<!-- Declaración del tipo de documento: indica que es un documento HTML5 -->
 <!DOCTYPE html>
-<html>
+<!-- Elemento raíz del documento, con atributo de idioma español -->
+<html lang="es">
+<!-- Cabecera del documento, contiene metadatos y enlaces a recursos -->
 <head>
-    <title>Servidor Node</title>
+    <!-- Especifica la codificación de caracteres UTF-8 (soporta tildes y caracteres especiales) -->
+    <meta charset="UTF-8">
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Lista de Tareas</title>
+    <!-- Enlace al archivo de estilos CSS externo (debe estar en la misma carpeta) -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+<!-- Cuerpo del documento, contiene el contenido visible de la página -->
 <body>
-    <h1>Servidor funcionando </h1>
-    <h3>Nombre: Jesus Alberto Amador Martinez</h3>
-    <p id="fecha"></p>
 
-    <script>
-        const fechaActual = new Date();
-        document.getElementById("fecha").innerText =
-            "Fecha actual: " + fechaActual;
-    </script>
+<!-- Contenedor principal que agrupa todo el contenido, probablemente para estilos CSS -->
+<div class="contenedor">
+
+    <!-- Encabezado de nivel 1, título principal de la página -->
+    <h1>Lista de Tareas</h1>
+
+    <!-- Área para agregar nuevas tareas (contenedor del input y botón) -->
+    <div class="input-area">
+        <!-- Campo de texto donde el usuario escribe la descripción de la tarea -->
+        <!-- id="nuevaTarea" será usado por JavaScript para obtener el valor -->
+        <input type="text" id="nuevaTarea" placeholder="Escribe una tarea...">
+        <!-- Botón que al hacer clic agrega la tarea (id usado por JS) -->
+        <button id="btnAgregar">Agregar</button>
+    </div>
+
+    <!-- Subtítulo para la sección de tareas pendientes -->
+    <h2>Tareas pendientes</h2>
+    <!-- Lista no ordenada (<ul>) que mostrará dinámicamente las tareas pendientes -->
+    <!-- El id "listaTareas" es utilizado por JavaScript para insertar los elementos -->
+    <ul id="listaTareas"></ul>
+
+    <!-- Botón para eliminar las tareas seleccionadas (con checkbox) -->
+    <!-- Su id "btnEliminar" lo conecta con el evento correspondiente en JS -->
+    <button id="btnEliminar">Eliminar seleccionadas</button>
+
+    <!-- Subtítulo para la sección de tareas ya realizadas -->
+    <h2>Tareas realizadas</h2>
+    <!-- Lista no ordenada que mostrará las tareas completadas -->
+    <!-- El id "tareasRealizadas" es usado por JS para actualizar esta lista -->
+    <ul id="tareasRealizadas"></ul>
+
+</div>
+<!-- Cierre del contenedor principal -->
+
+<!-- Inclusión del archivo JavaScript (Tarea.js) que contiene la lógica de la aplicación -->
+<!-- Se coloca al final del body para asegurar que los elementos del DOM ya existen cuando se ejecute -->
+<script src="Tarea.js"></script>
+
 </body>
 </html>

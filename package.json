@@ -1,5 +1,5 @@
 {
-  "name": "mi_server",
+  "name": "newto_do_list",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,5 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.19.0"
+  }
 }
